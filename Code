@@ -1,0 +1,23 @@
+import random
+r = 's'
+while r == 's':
+    p1 = input('sasso carta o forbici? ').lower()
+    while p1 != 'sasso' and p1 != 'carta' and p1 != 'forbici' :
+        p1 = input('devi scrivere sasso o carta o forbici ').lower()
+    p2 = random.choice(['Sasso', 'Carta', 'Forbici']).lower()
+    print('il computer ha scelto ', p2)
+    if p1 == 'carta' and p2 == 'forbici':
+        print ( 'vince il computer')
+    elif p2 == 'carta' and p1 == 'forbici':
+        print ( 'hai vinto')
+    elif p2 == 'forbici' and p1 == 'sasso':
+        print ( 'hai vinto')
+    elif p2 == 'sasso' and p1 == 'carta':
+        print ( 'hai vinto')
+    elif p2 == 'sasso' and p1 == 'forbici':
+        print ( 'vince il computer')
+    elif p2 == 'carta' and p1 == 'sasso':
+        print ( 'vince il computer')
+    elif p2==p1 :
+        print ('pareggio')
+    r = input ('vuoi giocare ancora? (s/n)').lower()
